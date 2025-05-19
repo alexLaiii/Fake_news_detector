@@ -49,9 +49,7 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Model files
-*.pt
-*.pth
+
 
 # Notebooks + cache
 *.ipynb_checkpoints/
