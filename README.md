@@ -1,4 +1,4 @@
-# Fake News Detector (WIP)
+# Fake News Detector (Work In Progress)
 
 A work-in-progress full-stack project for detecting fake news using a fine-tuned BERT model with SHAP visualizations.
 
