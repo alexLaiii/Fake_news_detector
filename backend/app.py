@@ -6,6 +6,12 @@ from fastapi.staticfiles import StaticFiles
 import uuid
 
 
+""" 
+Important thing to add:
+In production, you should tighten allow_origins:
+allow_origins=["https://your-frontend-domain.com"]
+only allow my frontend to call this backend
+"""
 
 app = FastAPI()
 
@@ -17,7 +23,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.mount("/static", StaticFiles(directory="static"), name="static")
-
+app.mount("/result", StaticFiles(directory="result"), name="result")
 class StatementInput(BaseModel):
     statement: str
 
