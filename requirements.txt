@@ -1,9 +1,7 @@
-fastapi
-uvicorn
-transformers
-torch
-pydantic
-<<<<<<< HEAD
-shap
-=======
->>>>>>> 5f537fbdf11b769ac7f3ce06163e06f17a92f608
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+transformers==4.35.2
+torch==2.1.1
+pydantic==2.5.0
+shap==0.43.0
+python-multipart==0.0.6

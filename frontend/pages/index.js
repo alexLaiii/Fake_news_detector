@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { Button } from "@/components/ui/button";
 import { BookOpenCheckIcon, BrainCogIcon, ChartBarBigIcon, ChartSplineIcon, CircleAlertIcon, CircleXIcon, NewspaperIcon } from 'lucide-react';
+import { apiUrl } from '../config';
 
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
    // Create Mutation
    const analyze = useMutation(
     {mutationFn: async () => {
-      const res = await fetch('http://localhost:8000/analyze',{
+      const res = await fetch(`${apiUrl}/analyze`,{
         method: 'POST',
         headers :{'Content-Type': 'application/json'},
         body: JSON.stringify({statement})
@@ -88,7 +89,7 @@ return (
           {result.plot_path && (
             <div className="mt-4">
               <img
-                src={`http://localhost:8000/${result.plot_path}`}
+                src={`${apiUrl}/${result.plot_path}`}
                 alt="SHAP Plot"
                 className="max-w-full"
               />
