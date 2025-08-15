@@ -17,7 +17,7 @@ only allow my frontend to call this backend
 app = FastAPI(title="Fake News Detector API", version="1.0.0")
 
 # Get allowed origins from environment variable or use default
-ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000").split(",")
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "https://fake-news-detector-jade.vercel.app,http://localhost:3000").split(",")
 
 app.add_middleware(
     CORSMiddleware,
